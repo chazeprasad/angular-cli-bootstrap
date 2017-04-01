@@ -1,0 +1,21 @@
+<style type="text/css" media="screen">
+    #audioUploadCmpWrapper{
+        position: relative;
+    }
+    #audioUploadCmpWrapper .file-progress{
+            /*width: 48px;*/
+            /*height: 48px;*/
+            position: absolute;
+            top: -5px;
+            left: 1px;
+    }
+</style>
+<div id="audioUploadCmpWrapper" class=""  >
+    <md-button ng-click="$ctrl.onUploadButtonClick($event)" class="md-icon-button md-fab md-mini" >
+        <i class="material-icons">file_upload</i>
+    </md-button>
+    <div class="md-list-item-text file-progress" layout="column" layout-align="space-around">
+        <md-progress-circular class="md-primary" md-mode="determinate"  value="{{$ctrl.progress}}"></md-progress-circular>
+
+    </div>
+</div>

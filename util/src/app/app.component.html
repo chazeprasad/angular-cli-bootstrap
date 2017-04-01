@@ -1,0 +1,1341 @@
+<!-- Header Area -->
+<div class="header_bar">
+  <!-- Header Left Logo -->
+  <div class="header_left">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <!-- Logo -->
+          <a href="index.html" title="SKYPLEX" class="javanvideo">SKYPLEX VIDEO</a>
+          <!-- Mobile Menu Button -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Header Left Logo -->
+
+  <!-- Header Right -->
+  <div class="header_right">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Search box -->
+        <div class="col-sm-4 col-md-5">
+          <div class="search_box">
+            <form action="search-results.php">
+              <input type="text" placeholder="Search here">
+              <input type="submit" value="">
+            </form>
+          </div>
+        </div>
+
+        <!-- Main Menu -->
+        <div class="col-sm-8 col-md-7">
+          <div class="social_icon">
+            <ul>
+              <li><a href="#" title="Facebook"><img width="20" src="assets/image/facebook.png" alt="Facebook"></a></li>
+              <li><a href="#" title="Twitter"><img width="20" src="assets/image/twitter.png" alt="Twitter"></a></li>
+            </ul>
+          </div>
+          <div class="mainmenu_area">
+            <div class="mainmenu navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="live-tv.html" title="Live TV">Live TV</a></li>
+                <li><a href="tv-shows.html" title="TV Shows">TV Shows</a></li>
+                <li><a href="movies.html" title="Movies">Movies</a></li>
+                <li><a href="series.html" title="Series">Series</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- /Header Right -->
+</div>
+<!-- /Header Area -->
+
+
+<!-- Content Area -->
+<div class="content_area">
+  <!-- Left Side Movies List -->
+  <div class="content_left">
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-sm-12 content_height">
+          <div class="movies_list home-page">
+
+            <div class="row">
+              <div class="col-sm-12 single_item">
+                <div class="slider_area">
+                    <owl-carousel [slides]="carouselSlides" >
+                        <div *ngFor="let slide of carouselSlides" class="item">
+                            <img [src]="slide.image"/>
+                            <div class="slider_title_tag">
+                                <a (click)="showVideo(slide)" >
+                                    <h2>{{ slide.title }}</h2>
+                                    <p>{{ slide.description }}</p>
+                                    <span class="link_icon"><img  src="assets/image/slider-link.png" alt=""></span>
+                                </a>
+                            </div>
+                        </div>
+                    </owl-carousel>
+
+
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-8 single_item">
+                <div class="page_title">
+                  <h2>Series</h2>
+                  <p>Views our last videos in Serie section</p>
+                </div>
+              </div>
+              <div class="col-xs-4 single_item">
+                <div class="sort_by alignright">
+                  <a href="#" title="View All" class="view_all">View All</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Movies List -->
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="movies_poster_area">
+                  <div class="movies_poster_section">
+                    <ul class="movie_poster_lists">
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Game Of Throne">
+                          <span class="movie_quality"></span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster1.jpg" alt="Game Of Throne">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Game Of Throne</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Arrow">
+                          <span class="movie_quality"> </span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster2.jpg" alt="Arrow">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Arrow</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Teen Wolf">
+                          <span class="movie_quality"> </span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster3.jpg" alt="Teen Wolf">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Teen Wolf</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Walking Dead">
+                          <span class="movie_quality"> </span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster4.jpg" alt="Walking Dead">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Walking Dead</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="The 100">
+                          <span class="movie_quality"> </span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster5.jpg" alt="The 100">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>The 100</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Vampire Diaries">
+                          <span class="movie_quality"> </span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster6.jpg" alt="Vampire Diaries">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Vampire Diaries</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="The Flash">
+                          <span class="movie_quality"> </span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster7.jpg" alt="The Flash">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>The Flash</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Pritty Little Liarse">
+                          <span class="movie_quality"> </span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster8.jpg" alt="Pritty Little Liarse">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Pritty Little Liarse</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Hawai Five-0">
+                          <span class="movie_quality"> </span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster9.jpg" alt="Hawai Five-0">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Hawai Five-0</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Super Natural">
+                          <span class="movie_quality"> </span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster10.jpg" alt="Super Natural">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Super Natural</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Game Of Throne">
+                          <span class="movie_quality"></span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster1.jpg" alt="Game Of Throne">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Game Of Throne</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Arrow">
+                          <span class="movie_quality"> </span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster2.jpg" alt="Arrow">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Arrow</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Teen Wolf">
+                          <span class="movie_quality"> </span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster3.jpg" alt="Teen Wolf">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Teen Wolf</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Walking Dead">
+                          <span class="movie_quality"> </span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster4.jpg" alt="Walking Dead">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Walking Dead</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="The 100">
+                          <span class="movie_quality"> </span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster5.jpg" alt="The 100">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>The 100</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Vampire Diaries">
+                          <span class="movie_quality"> </span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster6.jpg" alt="Vampire Diaries">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Vampire Diaries</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="The Flash">
+                          <span class="movie_quality"> </span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster7.jpg" alt="The Flash">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>The Flash</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Pritty Little Liarse">
+                          <span class="movie_quality"> </span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster8.jpg" alt="Pritty Little Liarse">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Pritty Little Liarse</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Hawai Five-0">
+                          <span class="movie_quality"> </span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster9.jpg" alt="Hawai Five-0">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Hawai Five-0</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Super Natural">
+                          <span class="movie_quality"> </span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster10.jpg" alt="Super Natural">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Super Natural</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /Movies List -->
+
+
+
+
+            <!-- ========================================================
+               Section Title | Movies Section
+            ==========================================================-->
+            <div class="row">
+              <div class="col-xs-8 single_item">
+                <div class="page_title">
+                  <h2>Movies</h2>
+                  <p>Views our last videos in movie section</p>
+                </div>
+              </div>
+              <div class="col-xs-4 single_item">
+                <div class="sort_by alignright">
+                  <a href="movies.html" title="View All" class="view_all">View All</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Movies List -->
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="movies_poster_area">
+                  <div class="movies_poster_section">
+                    <ul class="movie_poster_lists">
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Now you see me 2">
+                          <span class="movie_quality"></span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster11.jpg" alt="Now you see me 2">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Now you see me 2</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="The Nice Guys">
+                          <span class="movie_quality">HD</span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster12.jpg" alt="The Nice Guys">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>The Nice Guys</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Money Monster">
+                          <span class="movie_quality">HD</span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster13.jpg" alt="Money Monster">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Money Monster</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Star Wars">
+                          <span class="movie_quality"></span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster14.jpg" alt="Star Wars">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Star Wars</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Pulp Fiction">
+                          <span class="movie_quality"></span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster15.jpg" alt="Pulp Fiction">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Pulp Fiction</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Deadpool">
+                          <span class="movie_quality">HD</span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster16.jpg" alt="Deadpool">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Deadpool</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Vacation">
+                          <span class="movie_quality">HD</span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster17.jpg" alt="Vacation">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Vacation</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Intern">
+                          <span class="movie_quality"></span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster18.jpg" alt="Intern">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Intern</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="The Transporter">
+                          <span class="movie_quality">HD</span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster19.jpg" alt="The Transporter">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>The Transporter</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="The Martian">
+                          <span class="movie_quality">HD</span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster20.jpg" alt="The Martian">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>The Martian</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Now you see me 2">
+                          <span class="movie_quality"></span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster11.jpg" alt="Now you see me 2">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Now you see me 2</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="The Nice Guys">
+                          <span class="movie_quality">HD</span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster12.jpg" alt="The Nice Guys">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>The Nice Guys</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Money Monster">
+                          <span class="movie_quality">HD</span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster13.jpg" alt="Money Monster">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Money Monster</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Star Wars">
+                          <span class="movie_quality"></span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster14.jpg" alt="Star Wars">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Star Wars</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Pulp Fiction">
+                          <span class="movie_quality"></span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster15.jpg" alt="Pulp Fiction">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Pulp Fiction</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Deadpool">
+                          <span class="movie_quality">HD</span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster16.jpg" alt="Deadpool">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Deadpool</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Vacation">
+                          <span class="movie_quality">HD</span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster17.jpg" alt="Vacation">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Vacation</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Intern">
+                          <span class="movie_quality">HD</span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster18.jpg" alt="Intern">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Intern</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="The Transporter">
+                          <span class="movie_quality">HD</span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster19.jpg" alt="The Transporter">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>The Transporter</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="The Martian">
+                          <span class="movie_quality">HD</span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster20.jpg" alt="The Martian">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>The Martian</h4>
+                          </div>
+                        </a>
+                      </li>
+
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /Movies List -->
+
+
+
+
+
+            <!-- ========================================================
+               Section Title | TV Shows Section
+            ==========================================================-->
+            <div class="row">
+              <div class="col-xs-8 single_item">
+                <div class="page_title">
+                  <h2>TV Shows</h2>
+                  <p>Views our last videos in TV SHows section</p>
+                </div>
+              </div>
+              <div class="col-xs-4 single_item">
+                <div class="sort_by alignright">
+                  <a href="#" title="View All" class="view_all">View All</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Movies List -->
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="movies_poster_area">
+                  <div class="movies_poster_section tv_show">
+                    <ul class="movie_poster_lists">
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Narcos">
+                          <span class="movie_quality"></span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster21.jpg" alt="Narcos">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Narcos</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Arrow">
+                          <span class="movie_quality"></span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster2.jpg" alt="Arrow">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Arrow</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Teen Wolf">
+                          <span class="movie_quality"></span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster3.jpg" alt="Teen Wolf">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Teen Wolf</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Walking Dead">
+                          <span class="movie_quality"></span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster4.jpg" alt="Walking Dead">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Walking Dead</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="The 100">
+                          <span class="movie_quality"></span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster5.jpg" alt="The 100">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>The 100</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Game Of Throne">
+                          <span class="movie_quality">HD</span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster1.jpg" alt="Game Of Throne">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Game Of Throne</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Game Of Throne">
+                          <span class="movie_quality">HD</span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster1.jpg" alt="Game Of Throne">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Game Of Throne</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Game Of Throne">
+                          <span class="movie_quality">HD</span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster1.jpg" alt="Game Of Throne">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Game Of Throne</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Game Of Throne">
+                          <span class="movie_quality">HD</span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster1.jpg" alt="Game Of Throne">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Game Of Throne</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Game Of Throne">
+                          <span class="movie_quality">HD</span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster1.jpg" alt="Game Of Throne">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Game Of Throne</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Game Of Throne">
+                          <span class="movie_quality">HD</span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster1.jpg" alt="Game Of Throne">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Game Of Throne</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Game Of Throne">
+                          <span class="movie_quality">HD</span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster1.jpg" alt="Game Of Throne">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Game Of Throne</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Game Of Throne">
+                          <span class="movie_quality">HD</span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster1.jpg" alt="Game Of Throne">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Game Of Throne</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Game Of Throne">
+                          <span class="movie_quality">HD</span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster1.jpg" alt="Game Of Throne">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Game Of Throne</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Game Of Throne">
+                          <span class="movie_quality">HD</span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster1.jpg" alt="Game Of Throne">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Game Of Throne</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Game Of Throne">
+                          <span class="movie_quality">HD</span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster1.jpg" alt="Game Of Throne">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Game Of Throne</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Game Of Throne">
+                          <span class="movie_quality">HD</span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster1.jpg" alt="Game Of Throne">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Game Of Throne</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Game Of Throne">
+                          <span class="movie_quality">HD</span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster1.jpg" alt="Game Of Throne">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Game Of Throne</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Game Of Throne">
+                          <span class="movie_quality">HD</span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster1.jpg" alt="Game Of Throne">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Game Of Throne</h4>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="single_movie_poster_list">
+                        <a href="#" title="Game Of Throne">
+                          <span class="movie_quality">HD</span>
+                          <img class="movie_poster_img" src="assets/image/movie-poster1.jpg" alt="Game Of Throne">
+                          <div class="hover_display">
+                            <img src="assets/image/hover-icon.png" alt="">
+                            <h4>Game Of Throne</h4>
+                          </div>
+                        </a>
+                      </li>
+
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /Movies List -->
+
+
+
+            <!-- ========================================================
+               Section Title | Live TV Section
+            ==========================================================-->
+            <div class="row">
+              <div class="col-xs-8 single_item">
+                <div class="page_title">
+                  <h2>Live TV</h2>
+                  <p>Views our Live Channels</p>
+                </div>
+              </div>
+              <div class="col-xs-4 single_item">
+                <div class="sort_by alignright">
+                  <a href="movie-list.html" title="View All" class="view_all">View All</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="live_tv_section">
+                  <div class="live_tv_carousel">
+
+                    <div class="item">
+                      <div class="livetv_table">
+                        <div class="livetv_tablecell">
+                          <a href="#" title="CBS Reality">
+                            <img width="82" src="assets/image/cbs-reality.png" alt="CBS Reality">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="livetv_table">
+                        <div class="livetv_tablecell">
+                          <a href="#" title="MCS Extreme">
+                            <img width="91" src="assets/image/mcs.png" alt="MCS Extreme">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="livetv_table">
+                        <div class="livetv_tablecell">
+                          <a href="#" title="MCS Lifestyle">
+                            <img width="95" src="assets/image/mcs-lifestyle.png" alt="MCS Lifestyle">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="livetv_table">
+                        <div class="livetv_tablecell">
+                          <a href="#" title="Travel Channel">
+                            <img width="97" src="assets/image/travel.png" alt="Travel Channel">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="livetv_table">
+                        <div class="livetv_tablecell">
+                          <a href="#" title="DiscoveryHD Showcase">
+                            <img width="106" src="assets/image/discoveryhd.png" alt="DiscoveryHD Showcase">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="livetv_table">
+                        <div class="livetv_tablecell">
+                          <a href="#" title="CBS Reality">
+                            <img width="82" src="assets/image/cbs-reality.png" alt="CBS Reality">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="livetv_table">
+                        <div class="livetv_tablecell">
+                          <a href="#" title="MCS Extreme">
+                            <img width="91" src="assets/image/mcs.png" alt="MCS Extreme">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="livetv_table">
+                        <div class="livetv_tablecell">
+                          <a href="#" title="MCS Lifestyle">
+                            <img width="95" src="assets/image/mcs-lifestyle.png" alt="MCS Lifestyle">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="livetv_table">
+                        <div class="livetv_tablecell">
+                          <a href="#" title="Travel Channel">
+                            <img width="97" src="assets/image/travel.png" alt="Travel Channel">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="livetv_table">
+                        <div class="livetv_tablecell">
+                          <a href="#" title="DiscoveryHD Showcase">
+                            <img width="106" src="assets/image/discoveryhd.png" alt="DiscoveryHD Showcase">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+            <!-- ================= Copyright Section ===================-->
+            <div class="row copyright_section">
+              <div class="col-sm-8 single_item">
+                <div class="copyright_text">
+                  <p>JAVANVIDEO 2017 © All rights Reserved.</p>
+                </div>
+              </div>
+              <div class="col-sm-4 single_item">
+                <div class="aixsystem_logo">
+                  <img width="95" src="assets/image/aixsystem-logo.png" alt="">
+                </div>
+              </div>
+            </div>
+            <!-- ================= /Copyright Section ===================-->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Left Side Movies List -->
+
+
+  <!-- Right Side Filters -->
+  <div class="content_right content_height filter_area_div">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="filter_area">
+            <div class="filter_title">
+              <h2>Newest videos</h2>
+              <p>View our last videos in the website</p>
+            </div>
+
+
+            <div class="apply_filter">
+              <!-- Star Filters Form -->
+              <ul class="newest_movie_list">
+                <li>
+                  <a href="#">
+                    <div class="single_movie_list">
+                      <div class="movie_poster_thumb">
+                        <img width="50" src="assets/image/movie-thumb1.jpg" alt="">
+                      </div>
+                      <div class="movie_title_time">
+                        <h4>Movies</h4>
+                        <h3>Now You See Me 2</h3>
+                        <p>added 2 days ago</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <div class="single_movie_list">
+                      <div class="movie_poster_thumb">
+                        <img width="50" src="assets/image/movie-thumb2.jpg" alt="">
+                      </div>
+                      <div class="movie_title_time">
+                        <h4>Movies</h4>
+                        <h3>The Nice Guys</h3>
+                        <p>added 3 days ago</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <div class="single_movie_list">
+                      <div class="movie_poster_thumb">
+                        <img width="50" src="assets/image/movie-thumb3.jpg" alt="">
+                      </div>
+                      <div class="movie_title_time">
+                        <h4>Movies</h4>
+                        <h3>Schism <span class="has-season">Arrow - 4x23</span></h3>
+                        <p>added 3 days ago</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <div class="single_movie_list">
+                      <div class="movie_poster_thumb">
+                        <img width="50" src="assets/image/movie-thumb4.jpg" alt="">
+                      </div>
+                      <div class="movie_title_time">
+                        <h4>Movies</h4>
+                        <h3>Money Monster</h3>
+                        <p>added 5 days ago</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <div class="single_movie_list">
+                      <div class="movie_poster_thumb">
+                        <img width="50" src="assets/image/movie-thumb5.jpg" alt="">
+                      </div>
+                      <div class="movie_title_time">
+                        <h4>Movies</h4>
+                        <h3>Deadpool</h3>
+                        <p>added 7 days ago</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <div class="single_movie_list">
+                      <div class="movie_poster_thumb">
+                        <img width="50" src="assets/image/movie-thumb3.jpg" alt="">
+                      </div>
+                      <div class="movie_title_time">
+                        <h4>Movies</h4>
+                        <h3>Now You See Me 2</h3>
+                        <p>added 2 days ago</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <div class="single_movie_list">
+                      <div class="movie_poster_thumb">
+                        <img width="50" src="assets/image/movie-thumb1.jpg" alt="">
+                      </div>
+                      <div class="movie_title_time">
+                        <h4>Movies</h4>
+                        <h3>Now You See Me 2</h3>
+                        <p>added 2 days ago</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <div class="single_movie_list">
+                      <div class="movie_poster_thumb">
+                        <img width="50" src="assets/image/movie-thumb2.jpg" alt="">
+                      </div>
+                      <div class="movie_title_time">
+                        <h4>Movies</h4>
+                        <h3>The Nice Guys</h3>
+                        <p>added 3 days ago</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <div class="single_movie_list">
+                      <div class="movie_poster_thumb">
+                        <img width="50" src="assets/image/movie-thumb3.jpg" alt="">
+                      </div>
+                      <div class="movie_title_time">
+                        <h4>Movies</h4>
+                        <h3>Schism <span class="has-season">Arrow - 4x23</span></h3>
+                        <p>added 3 days ago</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <div class="single_movie_list">
+                      <div class="movie_poster_thumb">
+                        <img width="50" src="assets/image/movie-thumb4.jpg" alt="">
+                      </div>
+                      <div class="movie_title_time">
+                        <h4>Movies</h4>
+                        <h3>Money Monster</h3>
+                        <p>added 5 days ago</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <div class="single_movie_list">
+                      <div class="movie_poster_thumb">
+                        <img width="50" src="assets/image/movie-thumb5.jpg" alt="">
+                      </div>
+                      <div class="movie_title_time">
+                        <h4>Movies</h4>
+                        <h3>Deadpool</h3>
+                        <p>added 7 days ago</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <div class="single_movie_list">
+                      <div class="movie_poster_thumb">
+                        <img width="50" src="assets/image/movie-thumb3.jpg" alt="">
+                      </div>
+                      <div class="movie_title_time">
+                        <h4>Movies</h4>
+                        <h3>Now You See Me 2</h3>
+                        <p>added 2 days ago</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <div class="single_movie_list">
+                      <div class="movie_poster_thumb">
+                        <img width="50" src="assets/image/movie-thumb1.jpg" alt="">
+                      </div>
+                      <div class="movie_title_time">
+                        <h4>Movies</h4>
+                        <h3>Now You See Me 2</h3>
+                        <p>added 2 days ago</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <div class="single_movie_list">
+                      <div class="movie_poster_thumb">
+                        <img width="50" src="assets/image/movie-thumb2.jpg" alt="">
+                      </div>
+                      <div class="movie_title_time">
+                        <h4>Movies</h4>
+                        <h3>The Nice Guys</h3>
+                        <p>added 3 days ago</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <div class="single_movie_list">
+                      <div class="movie_poster_thumb">
+                        <img width="50" src="assets/image/movie-thumb3.jpg" alt="">
+                      </div>
+                      <div class="movie_title_time">
+                        <h4>Movies</h4>
+                        <h3>Schism <span class="has-season">Arrow - 4x23</span></h3>
+                        <p>added 3 days ago</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <div class="single_movie_list">
+                      <div class="movie_poster_thumb">
+                        <img width="50" src="assets/image/movie-thumb4.jpg" alt="">
+                      </div>
+                      <div class="movie_title_time">
+                        <h4>Movies</h4>
+                        <h3>Money Monster</h3>
+                        <p>added 5 days ago</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <div class="single_movie_list">
+                      <div class="movie_poster_thumb">
+                        <img width="50" src="assets/image/movie-thumb5.jpg" alt="">
+                      </div>
+                      <div class="movie_title_time">
+                        <h4>Movies</h4>
+                        <h3>Deadpool</h3>
+                        <p>added 7 days ago</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <div class="single_movie_list">
+                      <div class="movie_poster_thumb">
+                        <img width="50" src="assets/image/movie-thumb3.jpg" alt="">
+                      </div>
+                      <div class="movie_title_time">
+                        <h4>Movies</h4>
+                        <h3>Now You See Me 2</h3>
+                        <p>added 2 days ago</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <div class="single_movie_list">
+                      <div class="movie_poster_thumb">
+                        <img width="50" src="assets/image/movie-thumb5.jpg" alt="">
+                      </div>
+                      <div class="movie_title_time">
+                        <h4>Movies</h4>
+                        <h3>Deadpool</h3>
+                        <p>added 7 days ago</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <div class="single_movie_list">
+                      <div class="movie_poster_thumb">
+                        <img width="50" src="assets/image/movie-thumb3.jpg" alt="">
+                      </div>
+                      <div class="movie_title_time">
+                        <h4>Movies</h4>
+                        <h3>Now You See Me 2</h3>
+                        <p>added 2 days ago</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+              </ul>
+              <!-- End Filters Form -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <!-- /Right Side Filters -->
+</div>
+<!-- /Content Area -->

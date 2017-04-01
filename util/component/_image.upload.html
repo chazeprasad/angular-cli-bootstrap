@@ -1,0 +1,110 @@
+<style type="text/css" media="screen">
+    .image-upload-component-wrapper {
+        background: #1f2932 none repeat scroll 0 0;
+        display: table;
+
+        position: relative;
+        width: 100%;
+    }
+    .image-upload-component-wrapper .file-progress{
+            width: 100%;
+            /*height: 48px;*/
+            position: absolute;
+            bottom: -5px;
+            left: 0px;
+            z-index: 15;
+    }
+    .image-upload-component-wrapper .tablecell {
+        display: table-cell;
+        position: relative;
+        text-align: center;
+        vertical-align: bottom;
+        z-index: 1;
+        padding-bottom: 20px;
+    }
+
+    .image-upload-component-wrapper .tablecell h3 {
+        color: #fff;
+        font-size: 12px;
+        font-weight: 400;
+        margin: 0;
+        padding-bottom: 4px;
+        position: relative;
+
+    }
+    .image-upload-component-wrapper .tablecell h3:after {
+        background: #f35c50 none repeat scroll 0 0;
+        bottom: 0;
+        content: "";
+        height: 2px;
+        left: 50%;
+        margin-left: -20px;
+        position: absolute;
+        width: 40px;
+    }
+
+    .upload_button_camera {
+        left: 5px;
+        /*overflow: hidden;*/
+        position: absolute;
+        top: 10px;
+        /*width: 23px;*/
+        z-index: 20;
+    }
+    .upload_button_camera input[type="file"] {
+        cursor: pointer;
+        height: 20px;
+        left: 0;
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        position: absolute;
+        top: 0;
+        width: 23px;
+    }
+
+    .image-upload-component {
+        /*height: 235px;*/
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        z-index: 10;
+
+        /*background-color: #777788*/
+    }
+    .image-upload-component:after {
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1f2932+0,1f2932+100&0+0,1+100 */ /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(31,41,50,0) 0%,rgba(31,41,50,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(31,41,50,0) 0%,rgba(31,41,50,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001f2932', endColorstr='#1f2932',GradientType=0 ); /* IE6-9 */
+        content: "";
+        height: 100%;
+        left: 0;
+        opacity: 0.5;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+</style>
+
+<div class="image-upload-component-wrapper">
+    <div class="md-list-item-text file-progress" layout="column" layout-align="space-around">
+        <md-progress-linear class="md-primary" md-mode="determinate"  value="{{$ctrl.progress}}"></md-progress-linear>
+    </div>
+    <div class="image-upload-component">
+        <div  class="wrapper">
+
+        </div>
+        <div id="{{$ctrl.name}}{{::$id}}uploadButtonWrapper"  class="upload_button_camera">
+            <md-button ng-click="$ctrl.onUploadButtonClick($event)" class="md-icon-button md-primary md-fab md-mini" >
+                    <!-- <i class="material-icons">file_upload</i> -->
+                    <i class="material-icons">photo_camera</i>
+            </md-button>
+        </div>
+
+
+    </div>
+    <div id="" class="tablecell">
+        <h3>{{$ctrl.text}}</h3>
+    </div>
+</div>
