@@ -1,1 +1,239 @@
-/* You can add global styles to this file, and also import other style files */
+/* Basic Styles*/
+
+alignleft {
+    float: left;
+    margin-right: 15px;
+}
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+.aligncenter {
+    display: block;
+    margin: 0 auto 15px;
+}
+a:focus { outline: 0 solid }
+input:focus, select:focus, textarea:focus, button:focus { outline: none }
+img {
+    max-width: 100%;
+    height: auto;
+}
+ul {margin:0px; padding:0px; list-style:none}
+h1,h2,h3,h4,h5,h6 {
+    margin: 0 0 15px;
+    font-weight: 700;
+}
+html,body { height: 100% }
+body {
+    background: #f2f5f8 none repeat scroll 0 0;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 13px;
+}
+a:focus { outline: 0 solid }
+a,a:hover,a:focus,a:active { text-decoration: none !important }
+select::-ms-expand,input::-ms-expand { display: none }
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+input:focus,select:focus,textarea:focus,button:focus { outline: none }
+
+/* Remove Chrome Input Field's Unwanted Yellow Background Color */
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+
+button[disabled],
+html input[disabled] {
+    cursor: no-drop;
+    opacity: 0.5;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+button:active,
+html input:active {
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}
+
+/* Checkbox Style */
+.grey-checkbox { clear: both }
+.grey-checkbox label {
+    vertical-align: middle;
+    font-weight: 600;
+}
+label {
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    max-width: 100%;
+}
+.grey-checkbox label input { display: none !important; }
+input[type="radio"],
+input[type="checkbox"] {
+    line-height: normal;
+    margin: 4px 0 0;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+.grey-checkbox label span.box {
+    border: 1px solid #2d3340;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    height: 13px;
+    margin-top: 2px;
+    padding: 7px;
+    position: relative;
+    width: 13px;
+}
+.grey-checkbox [type="checkbox"]:checked + span.box:before {
+    border-radius: 0 !important;
+    color: #3493d5 !important;
+    content: "\2714";
+    display: block;
+    font-size: 11px;
+    height: 15px;
+    left: 2px;
+    position: absolute;
+    top: 0px;
+}
+.grey-checkbox span.text {
+    color: #2d3340;
+    float: left;
+    font-size: 13px;
+    margin-left: 5px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.grey-checkbox label span {
+    border-radius: 0 !important;
+    border-color: #3493d5 !important;
+    color:  #3493d5 !important;
+
+}
+
+/* END Basic Styles*/
+
+.add_products .form-group { margin-bottom: 30px }
+.add_products .form-group label, .user_info_left .form-group label, .user_info_right .form-group label {
+    color: #3493d5;
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    position: relative
+}
+.form-group .error {
+  color: red;
+  content: "*";
+  font-size: 12px;
+  margin-left: 2px;
+  position: absolute;
+}
+.add_products .form-group input, .user_info_left .form-group input, .user_info_right .form-group input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #99C9EA;
+    box-shadow: none;
+    color: #263b50;
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    outline: medium none;
+    padding: 5px 0;
+    width: 100%;
+}
+
+.add_products  select {
+    background: rgba(0, 0, 0, 0) url("assets/image/select-bg.png") no-repeat scroll right center / 8px auto;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #99C9EA;
+    box-shadow: none;
+    color: #263b50;
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 13px;
+    padding: 0 5px;
+    text-transform: capitalize;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0px;
+}
+
+add_products textarea {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #99C9EA;
+    height: 100px;
+    overflow: auto;
+    width: 100% !important;
+    padding: 5px 0 0;
+    color: #263b50;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.add_products .submit-margin { margin-top: 205px }
+.add_products .naked {
+    display: inline-block;
+    font-weight: 700;
+    margin-right: 30px;
+    vertical-align: middle;
+}
+.naked {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    color: #aab4b2;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.add_products .submit-plus {
+    display: inline-block;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+.add_products .submit-plus span {
+    text-align: center;
+}
+.submit-plus {
+    -moz-appearance: none;
+    background-color: #3493d5;
+    border: 0 none;
+    color: white;
+    display: block;
+    height: 45px;
+    padding: 0;
+    width: 145px;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+.submit-plus span {
+    border-right: 1px solid #5da9dd;
+    color: white;
+    display: inline-block;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 12px;
+    padding: 16px 25px;
+    text-align: right;
+}
+.submit-plus img {
+    float: right;
+    margin: 17px;
+}
+.submit-plus i {
+    float: right;
+    margin: 17px;
+}

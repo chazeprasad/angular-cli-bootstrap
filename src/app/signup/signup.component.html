@@ -1,0 +1,143 @@
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="col-10">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Panel title</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="add_products">
+
+                        <form novalidate #f="ngForm" (ngSubmit)="onSubmit(f)" >
+
+                            <div class="form-group  related_shop">
+                                <label>Full name</label>
+                                <input
+                                    class="form-control"
+                                    type="text"
+                                    placeholder="Your full name"
+                                    name="name"
+                                    ngModel
+                                    #userName="ngModel"
+                                    minlength="2"
+                                    required>
+
+                                <div *ngIf="userName.errors?.required && userName.touched" class="error">
+                                    Name is required
+                                </div>
+                                <div *ngIf="userName.errors?.minlength && userName.touched" class="error">
+                                    Minimum of 2 characters
+                                </div>
+                            </div>
+
+
+                            <div class="form-group" >
+                                <label>Day</label>
+                                <select
+                                    class="form-control"
+                                    class="form-control"
+                                    [(ngModel)]="user.day"
+                                    (ngModelChange)="onChangeDay($event)"
+                                    name="daySelect">
+                                    <option [ngValue]="day.key" *ngFor="let day of days">{{day.key}}</option>
+                                </select>
+                                {{user | json}}
+                            </div>
+
+                            <div class="form-group">
+                                <div class="checkbox">
+                                    <label>
+                                        <input
+                                            class="form-control"
+                                            type="checkbox"
+                                            name="isActive"
+                                            [(ngModel)]="user.isActive">
+                                        Is Active
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Topics</label>
+                                <div class="grey-checkbox" *ngFor="let topic of topics">
+                                    <label>
+                                        <input
+                                            class="form-control"
+                                            type="checkbox"
+                                            name="topics"
+                                            [checked]="user.topics.indexOf(topic.value) >= 0"
+                                            (change) = "updateTopics(topic.value, $event)"
+                                            [value]="topic.value">
+                                        <span class="box"></span>
+                                        <span class="text">{{topic.display}}</span>
+
+                                    </label>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Gender</label>
+                                <div class="radio" *ngFor="let gender of genders">
+                                    <label>
+                                        <input
+                                            class="form-control"
+                                            type="radio"
+                                            name="gender"
+                                            [(ngModel)]="user.gender"
+                                            [value]="gender.value">
+                                        {{gender.display}}
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div ngModelGroup="account" #userAccount="ngModelGroup">
+                                <label>
+                                    Email address
+                                    <input
+                                        class="form-control"
+                                        type="email"
+                                        placeholder="Your email address"
+                                        name="email"
+                                        ngModel
+                                        #userEmail="ngModel"
+                                        required>
+                                </label>
+                                <label>
+                                    <span>Confirm address</span>
+                                    <input
+                                        class="form-control"
+                                        type="email"
+                                        placeholder="Confirm your email address"
+                                        name="confirm"
+                                        ngModel
+                                        #userConfirm="ngModel"
+                                        required>
+                                </label>
+                                <div *ngIf="userAccount.invalid && userAccount.touched" class="error">
+                                    Both emails are required
+                                </div>
+                            </div>
+
+                            <div class="row ">
+                                <div class="col-md-12 text-right">
+                                    <button type="button"  class="naked" >
+                                        Cancel
+                                    </button>
+                                    <button type="button" [disabled]="f.invalid" class="submit-plus" >
+                                        <span>Submit</span>
+                                        <i class="fa fa-plus fa-1x" aria-hidden="true"> </i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
